@@ -1395,34 +1395,40 @@ canvas,
 .article-container pre,
 .article-container .highlight {
   overflow: auto;
-  margin: 1rem 0;
+  margin: 0 0 1rem;
   padding: 0;
-  padding-top: 1.4rem;
   background: #f6f8fa;
   color: #90a4ae;
   font-size: 14px;
   line-height: 20px;
 }
+.code-area-wrap {
+  position: relative;
+  margin: 0 0 1rem;
+}
 figure.highlight {
   position: relative;
 }
 blockquote {
-  margin: 0;
+  margin: 0 0 1rem;
   padding: 0.1rem 0.8rem;
   border-left: 0.2rem solid #49b1f5;
-  color: #6a737d;
   background-color: #e9f5fe;
+  color: #6a737d;
+}
+blockquote a {
+  word-break: break-all;
 }
 blockquote p {
   margin: 0 !important;
   padding: 0.5rem 0;
 }
 blockquote footer {
-  padding: 0 0 0.5rem 0;
+  padding: 0 0 0.5rem;
 }
 blockquote footer cite:before {
-  content: "—";
   padding: 0 0.3em;
+  content: '—';
 }
 .article-container pre,
 .article-container code {
@@ -1435,20 +1441,14 @@ blockquote footer cite:before {
   word-wrap: break-word;
   font-size: 14px;
 }
+.article-container pre {
+  padding: 10px 20px;
+}
 .article-container pre code {
   padding: 0;
   background: none;
   color: #90a4ae;
   text-shadow: none;
-}
-.article-container figure.highlight:after {
-  position: absolute;
-  top: 0;
-  z-index: 0;
-  min-width: 100%;
-  height: 1.4rem;
-  background: #e6ebf1;
-  content: "";
 }
 .article-container .highlight {
   position: relative;
@@ -1463,20 +1463,14 @@ blockquote footer cite:before {
   background: rgba(128,203,196,0.251);
   color: #90a4ae;
 }
+.article-container .highlight .line.marked {
+  background-color: rgba(128,203,196,0.251);
+}
 .article-container .highlight table {
   position: relative;
   margin: 0;
   width: auto;
   border: none;
-}
-.article-container .highlight table:after {
-  position: absolute;
-  top: -1.4rem;
-  z-index: 0;
-  width: 100%;
-  height: 1.4rem;
-  background: #e6ebf1;
-  content: "";
 }
 .article-container .highlight td {
   padding: 0;
@@ -1487,7 +1481,7 @@ blockquote footer cite:before {
   position: absolute;
   z-index: 1;
   margin-bottom: 1em;
-  padding: 0.2em 0 0.2em 0.7rem;
+  padding: 0.2rem 0 0.2rem 0.7rem;
   width: 100%;
   height: 1.4em;
   color: #90a4ae;
@@ -1519,7 +1513,7 @@ blockquote footer cite:before {
   border-bottom-color: #90a4ae;
 }
 .article-container .highlight figcaption+table {
-  margin-top: 1em;
+  margin-top: 1.1rem;
 }
 .article-container .highlight figcaption+table:before {
   margin-top: -2.1rem;
@@ -1701,6 +1695,20 @@ blockquote footer cite:before {
 .article-container pre .javascript .function::selection {
   background: rgba(128,203,196,0.251);
   color: #90a4ae;
+}
+.highlight-tools {
+  position: relative;
+  width: 100%;
+  height: 1.4rem;
+  background: #e6ebf1;
+  color: #90a4ae;
+  font-size: 14px;
+}
+.highlight-tools + figure {
+  margin: 0 !important;
+}
+.highlight-close {
+  height: 0 !important;
 }
 #aside_content {
   width: 25%;
